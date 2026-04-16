@@ -87,11 +87,20 @@ This demonstrates **match–action logic in SDN**.
 Screenshots included:
 
 * Controller running
+  The POX controller is successfully running and controlling the switch.
 * pingall (blocked)
+  When the custom controller is used, broadcast packets are blocked.
+  This results in 100% packet loss during communication.
 * pingall (working)
+  Using the default controller allows communication between hosts,
+  resulting in 0% packet loss.
 * h1 ping h2
+  Direct ping between hosts shows "Destination Host Unreachable" when      broadcast is blocked.
 * iperf output
+  iperf is used to measure network throughput and analyze performance.
 * Flow table
+  Flow table entries are observed using dpctl to understand switch         behavior.
+  
 
 ---
 
